@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/nf/Desktop/dotnet_ids/dotnet_ids.csproj": {}
+    "/home/nf/Desktop/dotnetIds/dotnet_ids.csproj": {}
   },
   "projects": {
-    "/home/nf/Desktop/dotnet_ids/dotnet_ids.csproj": {
+    "/home/nf/Desktop/dotnetIds/dotnet_ids.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nf/Desktop/dotnet_ids/dotnet_ids.csproj",
+        "projectUniqueName": "/home/nf/Desktop/dotnetIds/dotnet_ids.csproj",
         "projectName": "dotnet_ids",
-        "projectPath": "/home/nf/Desktop/dotnet_ids/dotnet_ids.csproj",
+        "projectPath": "/home/nf/Desktop/dotnetIds/dotnet_ids.csproj",
         "packagesPath": "/home/nf/.nuget/packages/",
-        "outputPath": "/home/nf/Desktop/dotnet_ids/obj/",
+        "outputPath": "/home/nf/Desktop/dotnetIds/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/nf/.nuget/NuGet/NuGet.Config"
@@ -41,6 +41,20 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
