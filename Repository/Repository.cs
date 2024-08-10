@@ -51,11 +51,6 @@ namespace dotnet_ids.Repository
             return await query.FirstOrDefaultAsync() ;
         }
 
-        public async Task SaveAsync()
-        {
-            await _db.SaveChangesAsync();
-        }
-
         public async Task<T> UpdateAsync(T entity)
         {
             _db.Update(entity);
@@ -63,5 +58,11 @@ namespace dotnet_ids.Repository
 
             return entity;
         }
+        
+        public async Task SaveAsync()
+        {
+            await _db.SaveChangesAsync();
+        }
+
     }
 }
