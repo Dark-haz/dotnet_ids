@@ -1,10 +1,11 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using Solution.dotnet_ids.Models.Entity.IEntity;
 
-namespace Dotnetids.Models
+namespace Dotnetids.Models.Entity
 {
 
-    public class Member
+    public class Member 
     {
         [Key]
         public int ID { get; set; }

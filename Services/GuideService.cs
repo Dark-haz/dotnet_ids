@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 using dotnet_ids.Repository.IRepository;
-using Dotnetids.Models;
+using Dotnetids.Models.Entity;
 
 public class GuideService
 {

@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace Dotnetids.Models
+namespace Dotnetids.Models.Entity
 {
     public class Event
     {

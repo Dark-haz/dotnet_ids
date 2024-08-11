@@ -19,7 +19,7 @@ namespace dotnet_ids.Migrations
                 .HasAnnotation("ProductVersion", "8.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Dotnetids.Models.Admin", b =>
+            modelBuilder.Entity("Dotnetids.Models.Entity.Admin", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -56,7 +56,7 @@ namespace dotnet_ids.Migrations
                     b.ToTable("Admins");
                 });
 
-            modelBuilder.Entity("Dotnetids.Models.Event", b =>
+            modelBuilder.Entity("Dotnetids.Models.Entity.Event", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -101,7 +101,7 @@ namespace dotnet_ids.Migrations
                     b.ToTable("Events");
                 });
 
-            modelBuilder.Entity("Dotnetids.Models.Guide", b =>
+            modelBuilder.Entity("Dotnetids.Models.Entity.Guide", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -143,7 +143,7 @@ namespace dotnet_ids.Migrations
                     b.ToTable("Guides");
                 });
 
-            modelBuilder.Entity("Dotnetids.Models.Member", b =>
+            modelBuilder.Entity("Dotnetids.Models.Entity.Member", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -237,13 +237,13 @@ namespace dotnet_ids.Migrations
 
             modelBuilder.Entity("EventGuide", b =>
                 {
-                    b.HasOne("Dotnetids.Models.Event", null)
+                    b.HasOne("Dotnetids.Models.Entity.Event", null)
                         .WithMany()
                         .HasForeignKey("EventsID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Dotnetids.Models.Guide", null)
+                    b.HasOne("Dotnetids.Models.Entity.Guide", null)
                         .WithMany()
                         .HasForeignKey("GuidesID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -252,13 +252,13 @@ namespace dotnet_ids.Migrations
 
             modelBuilder.Entity("EventMember", b =>
                 {
-                    b.HasOne("Dotnetids.Models.Event", null)
+                    b.HasOne("Dotnetids.Models.Entity.Event", null)
                         .WithMany()
                         .HasForeignKey("EventsID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Dotnetids.Models.Member", null)
+                    b.HasOne("Dotnetids.Models.Entity.Member", null)
                         .WithMany()
                         .HasForeignKey("MembersID")
                         .OnDelete(DeleteBehavior.Cascade)

@@ -1,6 +1,12 @@
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq.Expressions;
+using System.Security.Claims;
+using System.Text;
 using dotnet_ids.Repository.IRepository;
-using Dotnetids.Models;
+using Dotnetids.Models.Entity;
+using Microsoft.AspNetCore.Identity.Data;
+using Microsoft.IdentityModel.Tokens;
+using Solution.dotnet_ids.Models.Request;
 
 namespace Solution.dotnet_ids.Services
 {
@@ -8,9 +14,9 @@ namespace Solution.dotnet_ids.Services
     {
         private readonly IRepository<Admin> _dbAdmin;
 
-        public AdminService(IRepository<Admin> dbAdmin)
+        public AdminService(IRepository<Admin> dbAdmin , IConfiguration configuration)
         {
-            _dbAdmin = dbAdmin;
+            _dbAdmin = dbAdmin;            
         }
 
         public async Task<Admin> AddAdminAsync(Admin admin)

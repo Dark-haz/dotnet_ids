@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using dotnet_ids.Repository.IRepository;
 using Dotnetids.Data;
-using Dotnetids.Models;
+using Dotnetids.Models.Entity;
 using Org.BouncyCastle.Crypto.Signers;
 
 namespace dotnet_ids.Repository

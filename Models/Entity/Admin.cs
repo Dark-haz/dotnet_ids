@@ -1,9 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Solution.dotnet_ids.Models.Entity.IEntity;
 
-namespace Dotnetids.Models
+namespace Dotnetids.Models.Entity
 {
-    public class Admin
+    public class Admin 
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
