@@ -1,14 +1,13 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Dotnetids.Models.Entity
+namespace Solution.dotnet_ids.Models.DTO
 {
-
-    public class Member 
+    public class MemberCreateDTO
     {
-        [Key]
-        public int ID { get; set; }
-
         [Required]
         [MaxLength(20)]
         public required string FirstName { get; set; }
@@ -32,8 +31,7 @@ namespace Dotnetids.Models.Entity
         [MaxLength(10)]
         public required string Gender { get; set; }
 
-        [Required]
-        public DateTime JoiningDate { get; set; }
+        public DateTime JoiningDate { get; } = DateTime.Now;
 
         [Required]
         [Phone]
@@ -50,9 +48,5 @@ namespace Dotnetids.Models.Entity
         [Required]
         [MaxLength(20)]
         public required string Nationality { get; set; }
-
-        public ICollection<Event> Events { get; set; } = new List<Event>();
-
     }
-
 }

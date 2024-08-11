@@ -24,6 +24,9 @@
     <!-- Bearer Auth -->
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.7" />
     
+    <!-- Automapper -->
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+
   </ItemGroup>
 
 </Project>

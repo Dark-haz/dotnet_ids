@@ -41,12 +41,19 @@ namespace dotnet_ids.Repository
             return await query.ToListAsync();
         }
 
-        public async Task<T?> GetAsync(Expression<Func<T, bool>>? filter = null, bool tracked = true)
+        public async Task<T?> GetAsync(Expression<Func<T, bool>>? filter = null, bool tracked = true , string? includeNavigations = null)
         {
             IQueryable<T> query = dbSet;
 
             if (!tracked) { query.AsNoTracking(); }
             if (filter != null) { query = query.Where(filter); }
+            if (includeNavigations != null)
+            {
+                foreach (var includeNavigation in includeNavigations.Split(',', StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeNavigation); 
+                }
+            }
 
             return await query.FirstOrDefaultAsync() ;
         }

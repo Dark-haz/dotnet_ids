@@ -1,4 +1,6 @@
 using System.Text;
+using System.Text.Json.Serialization;
+using AutoMapper;
 using dotnet_ids.Repository;
 using dotnet_ids.Repository.IRepository;
 using Dotnetids.Data;
@@ -6,6 +8,9 @@ using Dotnetids.Models.Entity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Any;
+using Microsoft.OpenApi.Models;
+using Solution.dotnet_ids.Models.DTO;
 using Solution.dotnet_ids.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -52,6 +57,13 @@ builder.Services.AddAuthentication(options =>
         };
     }
 );
+
+//> Automapper
+builder.Services.AddAutoMapper(config =>{
+    config.CreateMap<Admin, AdminDTO>();
+    config.CreateMap<Member, MemberDTO>();
+    config.CreateMap<MemberCreateDTO, Member>();
+});
 
 var app = builder.Build();
 
