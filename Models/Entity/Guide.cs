@@ -25,7 +25,7 @@ namespace Dotnetids.Models.Entity
         public required string Email { get; set; }
 
         [Required]
-        [MinLength(5), MaxLength(20)]
+        [MinLength(5)]
         public required string Password { get; set; }
 
         [Required]
@@ -33,7 +33,7 @@ namespace Dotnetids.Models.Entity
 
         public required string Photo { get; set; }
 
-        [MaxLength(20)]
+        [MaxLength(100)]
         public required string Profession { get; set; }
 
         public ICollection<Event> Events { get; set; } = new List<Event>();

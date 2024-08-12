@@ -18,7 +18,7 @@ namespace Dotnetids.Models.Entity
         public required string Description { get; set; }
 
         [Required]
-        [MaxLength(25)]
+        [MaxLength(100)]
         public required string Category { get; set; }
 
         [Required]
@@ -35,7 +35,7 @@ namespace Dotnetids.Models.Entity
         public float Cost { get; set; }
 
         [Required]
-        [MaxLength(20)]
+        [MaxLength(50)]
         public required string Status { get; set; }
 
         public ICollection<Guide> Guides { get; set; } = new List<Guide>();

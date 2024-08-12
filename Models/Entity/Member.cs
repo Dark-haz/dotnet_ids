@@ -29,7 +29,7 @@ namespace Dotnetids.Models.Entity
         public DateOnly BirthDay { get; set; }
 
         [Required]
-        [MaxLength(10)]
+        [MaxLength(50)]
         public required string Gender { get; set; }
 
         [Required]
@@ -44,11 +44,11 @@ namespace Dotnetids.Models.Entity
 
         public required string Photo { get; set; }
 
-        [MaxLength(20)]
+        [MaxLength(100)]
         public required string Profession { get; set; }
 
         [Required]
-        [MaxLength(20)]
+        [MaxLength(100)]
         public required string Nationality { get; set; }
 
         public ICollection<Event> Events { get; set; } = new List<Event>();
