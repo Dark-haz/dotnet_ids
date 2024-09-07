@@ -9,6 +9,7 @@ using Org.BouncyCastle.Crypto.Signers;
 
 namespace dotnet_ids.Repository
 {
+    // Repository is general for DB interactions
 
     public class AdminRepository : Repository<Admin> , IRepository<Admin>
     {

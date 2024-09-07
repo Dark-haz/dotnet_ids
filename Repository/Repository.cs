@@ -32,11 +32,19 @@ namespace dotnet_ids.Repository
             await SaveAsync();
         }
 
-        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null)
+        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null , bool tracked = true , string? includeNavigations = null)
         {
             IQueryable<T> query = dbSet;
 
+            if (!tracked) { query.AsNoTracking(); }
             if (filter != null) { query = query.Where(filter); }
+            if (includeNavigations != null)
+            {
+                foreach (var includeNavigation in includeNavigations.Split(',', StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeNavigation); 
+                }
+            }
 
             return await query.ToListAsync();
         }
