@@ -25,7 +25,7 @@ namespace dotnet_ids.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateOnly>("Birthday")
+                    b.Property<DateTime>("Birthday")
                         .HasColumnType("date");
 
                     b.Property<string>("Email")
@@ -64,8 +64,8 @@ namespace dotnet_ids.Migrations
 
                     b.Property<string>("Category")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("varchar(25)");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<float>("Cost")
                         .HasColumnType("float");
@@ -93,8 +93,8 @@ namespace dotnet_ids.Migrations
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.HasKey("ID");
 
@@ -126,8 +126,7 @@ namespace dotnet_ids.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Photo")
                         .IsRequired()
@@ -135,8 +134,8 @@ namespace dotnet_ids.Migrations
 
                     b.Property<string>("Profession")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.HasKey("ID");
 
@@ -149,7 +148,7 @@ namespace dotnet_ids.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateOnly>("BirthDay")
+                    b.Property<DateTime>("BirthDay")
                         .HasColumnType("date");
 
                     b.Property<string>("Email")
@@ -167,8 +166,8 @@ namespace dotnet_ids.Migrations
 
                     b.Property<string>("Gender")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("varchar(10)");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<DateTime>("JoiningDate")
                         .HasColumnType("datetime(6)");
@@ -184,8 +183,8 @@ namespace dotnet_ids.Migrations
 
                     b.Property<string>("Nationality")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -197,8 +196,8 @@ namespace dotnet_ids.Migrations
 
                     b.Property<string>("Profession")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.HasKey("ID");
 
