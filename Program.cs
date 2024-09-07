@@ -31,6 +31,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IRepository<Admin>, AdminRepository>();
 builder.Services.AddScoped<IRepository<Member>, MemberRepository>();
 builder.Services.AddScoped<IRepository<Guide>, GuideRepository>();
+builder.Services.AddScoped<IGuideRepository, GuideRepository>();
 builder.Services.AddScoped<IRepository<Event>, EventRepository>();
 
 
