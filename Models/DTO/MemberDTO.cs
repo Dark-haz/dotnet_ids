@@ -20,6 +20,8 @@ namespace Solution.dotnet_ids.Models.DTO
 
         public required DateTime JoiningDate { get; set; }
 
+        public required string Email { get; set; }
+
         public required string MobileNumber { get; set; }
 
         public required string EmergencyNumber { get; set; }

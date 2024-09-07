@@ -5,13 +5,22 @@ using System.Threading.Tasks;
 
 namespace Solution.dotnet_ids.Models.DTO
 {
-    public class AdminDTO
+    public class GuideDTO
     {
-        public required int ID { get; set; }
+        public int ID { get; set; }
+
         public required string FirstName { get; set; }
+
         public required string LastName { get; set; }
-        public required DateOnly Birthday { get; set; }
-        public required string Gender { get; set; }
+
         public required string Email { get; set; }
+
+        public DateTime JoiningDate { get; set; }
+
+        public required string Photo { get; set; }
+
+        public required string Profession { get; set; }
+
+
     }
 }
